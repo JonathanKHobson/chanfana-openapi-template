@@ -18,7 +18,7 @@ Besides being able to see the OpenAPI schema (openapi.json) in the browser, you 
 <!-- dash-content-end -->
 
 > [!IMPORTANT]
-> When using C3 to create this project, select "no" when it asks if you want to deploy. You need to follow this project's [setup steps](https://github.com/cloudflare/templates/tree/main/openapi-template#setup-steps) before deploying.
+> When using C3 to create this project, select "no" when it asks if you want to deploy. You need to follow this project's [setup steps](#setup-steps) before deploying.
 
 ## Getting Started
 
@@ -28,7 +28,7 @@ Outside of this repo, you can start a new project with this template using [C3](
 npm create cloudflare@latest -- --template=cloudflare/templates/openapi-template
 ```
 
-A live public deployment of this template is available at [https://openapi-template.templates.workers.dev](https://openapi-template.templates.workers.dev)
+The [Cloudflare template demo](https://openapi-template.templates.workers.dev) shows the upstream example; it is not evidence that this fork is deployed.
 
 ## Setup Steps
 
@@ -40,7 +40,7 @@ A live public deployment of this template is available at [https://openapi-templ
    ```bash
    npx wrangler d1 create openapi-template-db
    ```
-   ...and update the `database_id` field in `wrangler.json` with the new database ID.
+   ...and update the `database_id` field in `wrangler.jsonc` with the new database ID.
 3. Run the following db migration to initialize the database (notice the `migrations` directory in this project):
    ```bash
    npx wrangler d1 migrations apply DB --remote
